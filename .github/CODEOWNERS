@@ -1,0 +1,13 @@
+# Each audience area has an owner who keeps it accurate (ADR-0002).
+# Team names are placeholders for the demo.
+
+*                           @lunaris-demo/platform
+
+/docs/user/                 @lunaris-demo/product
+/docs/domain/               @lunaris-demo/product
+/docs/development/          @lunaris-demo/platform
+/docs/architecture/         @lunaris-demo/architects
+/docs/operations/           @lunaris-demo/operations
+/api/                       @lunaris-demo/platform @lunaris-demo/architects
+
+/.github/                   @lunaris-demo/platform
