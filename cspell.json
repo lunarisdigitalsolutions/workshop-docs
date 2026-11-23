@@ -8,8 +8,8 @@
   ],
   "ignorePaths": [
     "node_modules/**",
-    "website/build/**",
-    "website/.docusaurus/**",
+    "src/DeveloperPortal/build/**",
+    "src/DeveloperPortal/.docusaurus/**",
     "docs/development/reference/api.md",
     "package-lock.json",
     ".vale/styles/**"

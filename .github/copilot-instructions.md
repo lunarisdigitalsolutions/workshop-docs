@@ -1,8 +1,8 @@
 # Instructions for coding agents
 
 This repository documents **Pizza Luna**, a fictional pizza chain with three branches. It contains
-documentation only: Markdown in `docs/`, the API contract in `api/openapi.json` and the Docusaurus
-portal in `website/`. Humans and agents follow the same rules.
+documentation only: Markdown in `docs/`, the API contract in `src/WebApi/openapi.json` and the
+Docusaurus portal in `src/DeveloperPortal/`. Humans and agents follow the same rules.
 
 ## Where information goes
 
@@ -30,11 +30,11 @@ Follow the [documentation guideline](../docs/development/guidelines/documentatio
 
 ## What does not belong in the documentation
 
-- Speculation or behaviour that is not in `api/openapi.json` or an accepted ADR.
+- Speculation or behaviour that is not in `src/WebApi/openapi.json` or an accepted ADR.
 - Copies of information that already exists elsewhere in `docs/`.
 - Long code samples that duplicate the implementation.
 - Meeting notes, plans, customer names or personal data.
-- Edits to `docs/development/reference/api.md` – it is generated from `api/openapi.json`.
+- Edits to `docs/development/reference/api.md` – it is generated from `src/WebApi/openapi.json`.
 
 Prefer the smallest change that keeps the documentation correct. More documentation is not better
 documentation.

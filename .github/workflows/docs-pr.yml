@@ -7,8 +7,8 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
-      - 'api/**'
-      - 'website/**'
+      - 'src/WebApi/**'
+      - 'src/DeveloperPortal/**'
       - 'scripts/**'
       - '*.md'
       - '.github/**/*.md'
@@ -75,6 +75,6 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      - run: npm install --prefix website --no-audit --no-fund
+      - run: npm install --prefix src/DeveloperPortal --no-audit --no-fund
       - name: Build portal (fails on broken links)
         run: npm run docs:build

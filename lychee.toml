@@ -8,4 +8,4 @@ exclude = [
   "^http://localhost",
   "pizzaluna\\.example",
 ]
-exclude_path = ["website/build", "node_modules", "docs/development/reference/api.md"]
+exclude_path = ["src/DeveloperPortal/build", "node_modules", "docs/development/reference/api.md"]

@@ -8,7 +8,7 @@ Add or change an endpoint of the ordering API without breaking clients or leavin
 behind.
 
 1. Change the endpoint in the owning module and add or update its tests.
-2. Update the contract in `api/openapi.json`. It is the source for the generated
+2. Update the contract in `src/WebApi/openapi.json`. It is the source for the generated
    [API reference](../reference/api.md) and the frontend client.
 3. Check the change chain from the [documentation guideline](../guidelines/documentation.md):
    - new or changed order behaviour → update the [order lifecycle](../../domain/business-rules/order-lifecycle.md);

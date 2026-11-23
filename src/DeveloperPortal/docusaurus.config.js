@@ -1,5 +1,5 @@
 // @ts-check
-// Docusaurus renders the Markdown in ../docs (ADR-0007). The docs folder stays the single source.
+// Docusaurus renders the Markdown in ../../docs (ADR-0007). The docs folder stays the single source.
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -39,7 +39,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: '../docs',
+          path: '../../docs',
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
           showLastUpdateTime: true,

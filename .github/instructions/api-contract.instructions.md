@@ -1,5 +1,5 @@
 ---
-applyTo: 'api/openapi.json'
+applyTo: 'src/WebApi/openapi.json'
 ---
 
 # API contract changes

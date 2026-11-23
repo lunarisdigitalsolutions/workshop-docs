@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-// Generates docs/development/reference/api.md from api/openapi.json.
+// Generates docs/development/reference/api.md from src/WebApi/openapi.json.
 // The generated page is not committed: the contract is the single source (ADR-0009, "generate what can be generated").
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
 const root = process.cwd();
-const spec = JSON.parse(readFileSync(join(root, 'api', 'openapi.json'), 'utf8'));
+const spec = JSON.parse(readFileSync(join(root, 'src', 'WebApi', 'openapi.json'), 'utf8'));
 const target = join(root, 'docs', 'development', 'reference', 'api.md');
 
 const ref = (schema) => (schema?.$ref ? schema.$ref.split('/').pop() : null);
@@ -19,7 +19,7 @@ const cell = (text = '') => String(text).replace(/\|/g, '\\|').replace(/\n/g, ' 
 
 const out = [];
 out.push('---', 'title: API reference', 'sidebar_position: 1', 'tags: [development, api, reference]', '---', '');
-out.push(`<!-- Generated from api/openapi.json by scripts/generate-api-reference.mjs. Do not edit. -->`, '');
+out.push(`<!-- Generated from src/WebApi/openapi.json by scripts/generate-api-reference.mjs. Do not edit. -->`, '');
 out.push(`${spec.info.description}`, '');
 out.push(`**Version:** ${spec.info.version} · **Base URL:** \`${spec.servers?.[0]?.url ?? ''}\``, '');
 
@@ -61,4 +61,4 @@ for (const [name, schema] of Object.entries(spec.components?.schemas ?? {})) {
 
 mkdirSync(dirname(target), { recursive: true });
 writeFileSync(target, out.join('\n'));
-console.log(`Generated ${target.replace(root + '/', '')} from api/openapi.json`);
+console.log(`Generated ${target.replace(root + '/', '')} from src/WebApi/openapi.json`);

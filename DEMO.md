@@ -25,7 +25,7 @@ es wieder?"** (45 minutes, three demos). Each demo lists what to show, where it 
 
    ```bash
    npm install
-   npm install --prefix website
+   npm install --prefix src/DeveloperPortal
    npm run docs:build
    ```
 
@@ -88,7 +88,7 @@ Reset: `git restore docs/architecture/views/order-flow.md`
 2. The navigation bar shows the five audiences – the folder structure is the navigation.
 3. Search for `dead letter` and open the runbook. At the bottom: *last updated* (from Git) and
    *Edit this page*.
-4. Development → Reference → **API reference**: generated from `api/openapi.json` by
+4. Development → Reference → **API reference**: generated from `src/WebApi/openapi.json` by
    `scripts/generate-api-reference.mjs`, never edited by hand.
 
 If time is short, keep part B to steps 1–2.

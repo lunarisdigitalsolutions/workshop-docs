@@ -2,11 +2,11 @@
 node_modules/
 
 # Docusaurus
-website/build/
-website/.docusaurus/
-website/.cache-loader/
+src/DeveloperPortal/build/
+src/DeveloperPortal/.docusaurus/
+src/DeveloperPortal/.cache-loader/
 
-# Generated documentation (built from api/openapi.json)
+# Generated documentation (built from src/WebApi/openapi.json)
 docs/development/reference/api.md
 
 # Vale downloaded styles

@@ -11,7 +11,7 @@ Walk the change chain. Tick what you updated or confirm it is not affected.
 - [ ] **Users:** user guide updated for customers or branch staff, or not affected
 - [ ] **Domain:** glossary or business rules updated, or not affected
 - [ ] **Operations:** deployment docs, alerts or runbooks updated, or not affected
-- [ ] **API:** `api/openapi.json` matches the implemented behaviour, or not affected
+- [ ] **API:** `src/WebApi/openapi.json` matches the implemented behaviour, or not affected
 - [ ] `npm run lint:docs` passes locally
 
 ## Review focus

@@ -19,8 +19,8 @@ docs/                 Markdown documentation, one folder per audience
   development/        How does it work?           guidelines, how-tos, process, generated reference
   architecture/       Why was it built this way?  views, decisions (MADR), quality
   operations/         What do I do when it breaks? deployment, monitoring, runbooks, post-mortems
-api/openapi.json      API contract, source of the generated API reference
-website/              Docusaurus portal that renders docs/
+src/WebApi/openapi.json  API contract, source of the generated API reference
+src/DeveloperPortal/  Docusaurus portal that renders docs/
 scripts/              Structure check, lint runner, API reference generator
 demo/                 Patches and scripts for the live demos
 .github/              CI workflows, PR template, CODEOWNERS, agent instructions and prompts
@@ -33,7 +33,7 @@ Requires Node.js 22.
 ```bash
 npm install                    # lint tooling
 npm run lint:docs              # markdownlint, cspell, structure and ADR checks
-npm install --prefix website   # portal dependencies
+npm install --prefix src/DeveloperPortal   # portal dependencies
 npm run docs:start             # portal on http://localhost:3000
 ```
 
