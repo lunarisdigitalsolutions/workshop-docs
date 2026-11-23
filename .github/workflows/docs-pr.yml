@@ -48,6 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Generate API reference (linked from the docs)
+        run: node scripts/generate-api-reference.mjs
       - uses: lycheeverse/lychee-action@v2
         with:
           args: --config lychee.toml docs *.md
