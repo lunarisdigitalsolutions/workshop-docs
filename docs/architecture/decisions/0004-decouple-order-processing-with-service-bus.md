@@ -2,7 +2,6 @@
 title: "ADR-0004: Decouple order processing with Service Bus"
 status: accepted
 date: 2026-09-15
-decision-makers: Pizza Luna platform team
 tags: [adr, architecture, azure]
 ---
 

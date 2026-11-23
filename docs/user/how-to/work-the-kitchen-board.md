@@ -8,7 +8,7 @@ For branch staff: handle online orders from acceptance to handover on the kitche
 
 1. Sign in at the branch tablet with your staff account. The board shows your branch's accepted
    orders, oldest first.
-2. Select **Start** on the next order. Its status changes to **In the oven** and the customer can no
+2. Click on **Start** on the next order. Its status changes to **In the oven** and the customer can no
    longer cancel it.
 3. When the order is finished, select **Ready** (pickup) or **Out for delivery** (delivery). The
    customer is notified by email.

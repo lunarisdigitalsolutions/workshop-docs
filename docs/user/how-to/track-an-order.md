@@ -21,4 +21,4 @@ Follow an order you placed and cancel it while that is still possible.
 3. To cancel, select **Cancel order**. This is possible until the status changes to **In the oven**.
    After that, call the branch.
 
-Something looks wrong? See [Troubleshooting](../troubleshooting.md).
+Something looks wrong? See [Troubleshooting](../troubleshooting-guide.md).

@@ -12,11 +12,16 @@ account.
 Open the shop and select **Delivery** or **Pickup**.
 
 - **Delivery:** enter your postal code. The shop picks the branch that delivers to you.
-- **Pickup:** choose a branch. The Campus branch offers pickup only.
+- **Pickup:** choose a branch. The Campus branch offers pickup only. You recieve a reminder when
+  your order is ready, and you show this code at the counter:
+
+```
+OT-0815
+```
 
 ## 2. Build your order
 
-1. Pick a pizza, for example **Margherita**, and choose **Regular** (26 cm) or **Large** (32 cm).
+1. Pick a pizza, for example **Margerita**, and choose **Regular** (26 cm) or **Large** (32 cm).
 2. Add up to five extra toppings.
 3. Select **Add to cart**. Repeat for drinks and sides.
 
