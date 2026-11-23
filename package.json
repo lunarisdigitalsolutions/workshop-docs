@@ -1,0 +1,24 @@
+{
+  "name": "pizza-luna-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Documentation as Code demo for the Pizza Luna ordering platform.",
+  "scripts": {
+    "lint:docs": "npm run lint:md && npm run lint:spelling && npm run lint:structure",
+    "lint:md": "markdownlint-cli2",
+    "lint:spelling": "cspell --no-progress --show-suggestions \"docs/**/*.md\" \"*.md\" \".github/**/*.md\"",
+    "lint:structure": "node scripts/check-docs.mjs",
+    "lint:style": "vale docs",
+    "lint:links": "lychee --config lychee.toml docs \"*.md\"",
+    "docs:generate": "node scripts/generate-api-reference.mjs",
+    "docs:start": "npm run docs:generate && npm --prefix website start",
+    "docs:build": "npm run docs:generate && npm --prefix website run build"
+  },
+  "devDependencies": {
+    "cspell": "^9.1.0",
+    "markdownlint-cli2": "^0.18.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

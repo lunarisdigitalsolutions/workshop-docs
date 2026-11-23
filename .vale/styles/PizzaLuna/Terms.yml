@@ -1,0 +1,9 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: true
+swap:
+  click on: select
+  e-mail: email
+  pizzeria luna: Pizza Luna
+  check-out: checkout

@@ -1,0 +1,10 @@
+extends: existence
+message: "Remove filler: '%s'."
+level: warning
+ignorecase: true
+tokens:
+  - simply
+  - just
+  - basically
+  - obviously
+  - easily

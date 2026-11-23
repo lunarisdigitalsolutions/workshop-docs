@@ -1,0 +1,11 @@
+# Link checker: https://lychee.cli.rs
+include_fragments = false
+no_progress = true
+max_retries = 2
+timeout = 20
+accept = ["200..=299", "429"]
+exclude = [
+  "^http://localhost",
+  "pizzaluna\\.example",
+]
+exclude_path = ["website/build", "node_modules", "docs/development/reference/api.md"]
