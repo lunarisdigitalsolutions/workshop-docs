@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Docusaurus
+website/build/
+website/.docusaurus/
+website/.cache-loader/
+
+# Generated documentation (built from api/openapi.json)
+docs/development/reference/api.md
+
+# Vale downloaded styles
+.vale/styles/*
+!.vale/styles/PizzaLuna/
+!.vale/styles/config/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
