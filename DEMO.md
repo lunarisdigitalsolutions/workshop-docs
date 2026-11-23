@@ -63,7 +63,7 @@ Reset: `git restore docs/architecture/views/order-flow.md`
 
 ## Demo 2 – From pull request to portal (≈ 8 min)
 
-**Part A – validate (≈ 5 min)**
+### Part A – validate (≈ 5 min)
 
 1. Show the open PR `demo/pickup-docs`: the template's documentation checklist and the code owners
    requested by `CODEOWNERS`.
@@ -82,7 +82,7 @@ Reset: `git restore docs/architecture/views/order-flow.md`
    `npm run lint:spelling` again – green.
 5. Clean up: `git switch main`
 
-**Part B – find (≈ 3 min)**
+### Part B – find (≈ 3 min)
 
 1. `npm run docs:start` and open `http://localhost:3000`.
 2. The navigation bar shows the five audiences – the folder structure is the navigation.
