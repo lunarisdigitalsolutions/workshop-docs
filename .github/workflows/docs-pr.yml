@@ -1,0 +1,78 @@
+# Validates documentation on every pull request (ADR-0009).
+# Pin actions to commit SHAs before using this outside the demo.
+name: 'Docs: Pull request'
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'api/**'
+      - 'website/**'
+      - 'scripts/**'
+      - '*.md'
+      - '.github/**/*.md'
+      - 'cspell.json'
+      - '.markdownlint-cli2.jsonc'
+      - '.vale.ini'
+      - '.vale/**'
+      - 'lychee.toml'
+      - '.github/workflows/docs-pr.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Markdown, spelling and structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - name: Markdown (markdownlint)
+        run: npm run lint:md
+      - name: Spelling (cspell)
+        run: npm run lint:spelling
+      - name: Structure and ADRs
+        run: npm run lint:structure
+
+  links:
+    name: Links (lychee)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml docs *.md
+          fail: true
+
+  style:
+    name: Style (Vale)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: errata-ai/vale-action@reviewdog
+        with:
+          files: docs
+          fail_on_error: true
+
+  build:
+    name: Website build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm install --prefix website --no-audit --no-fund
+      - name: Build portal (fails on broken links)
+        run: npm run docs:build
