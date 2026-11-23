@@ -10,6 +10,8 @@ on:
       - 'src/WebApi/**'
       - 'src/DeveloperPortal/**'
       - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
       - '*.md'
       - '.github/**/*.md'
       - 'cspell.json'
@@ -75,6 +77,6 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      - run: npm install --prefix src/DeveloperPortal --no-audit --no-fund
+      - run: npm ci --no-audit --no-fund
       - name: Build portal (fails on broken links)
         run: npm run docs:build

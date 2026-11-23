@@ -28,6 +28,7 @@ scripts/                  Structure check, lint runner, API reference generator
 .github/                  CI workflows, PR template, CODEOWNERS, agent instructions and prompts
 .vale/                    Vale style rules for the project terms
 AGENTS.md, CLAUDE.md      Entry points for coding agents
+package.json              npm scripts and all tooling, including the portal (locked in package-lock.json)
 ```
 
 ## Run it
@@ -35,10 +36,9 @@ AGENTS.md, CLAUDE.md      Entry points for coding agents
 Requires Node.js 22.
 
 ```bash
-npm ci                                     # lint tooling from the lockfile
-npm install --prefix src/DeveloperPortal   # portal dependencies
-npm run lint:docs                          # markdownlint, cspell, structure and ADR checks
-npm run docs:start                         # portal on http://localhost:3000
+npm ci              # lint tooling and portal from the lockfile
+npm run lint:docs   # markdownlint, cspell, structure and ADR checks
+npm run docs:start  # portal on http://localhost:3000
 ```
 
 | Script | What it does |
@@ -52,6 +52,7 @@ npm run docs:start                         # portal on http://localhost:3000
 | `npm run docs:generate` | Generates `docs/development/reference/api.md` from `src/WebApi/openapi.json` |
 | `npm run docs:start` | Generates the API reference and starts the portal |
 | `npm run docs:build` | Generates the API reference and builds the portal; fails on broken links |
+| `npm run docs:clear` | Removes the portal's build output and generated files |
 
 `lint:style` and `lint:links` need tools outside npm; CI runs them in the
 [pull request workflow](.github/workflows/docs-pr.yml).
@@ -96,7 +97,7 @@ Each demo branch starts from `main` and adds exactly one commit.
 - [ ] Open a non-draft pull request from `demo/broken-docs` to `main`, so CI is already red when you
   show it.
 - [ ] Install and build the portal once – the first start is slow:
-  `npm ci`, `npm install --prefix src/DeveloperPortal`, `npm run docs:build`.
+  `npm ci`, `npm run docs:build`.
 - [ ] VS Code extensions: *markdownlint*, *Code Spell Checker*, *Markdown Preview Mermaid Support*,
   optionally *Vale VSCode*. Editor font size ≥ 20.
 - [ ] Record demo 3 as a fallback video.
