@@ -1,5 +1,7 @@
 # Pizza Luna – Documentation as Code Demo
 
+<!-- cspell:ignore gehört wohin finde wieder -->
+
 Demo repository for the talk **"Documentation as Code – Was gehört wohin und wie finde ich es wieder?"**.
 
 It documents *Pizza Luna*, a fictional pizza chain with three branches. The platform – an Angular

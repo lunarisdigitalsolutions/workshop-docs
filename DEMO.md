@@ -1,5 +1,7 @@
 # Demo guide
 
+<!-- cspell:disable -- mixed German slide titles and English instructions -->
+
 How to use this repository in the talk **"Documentation as Code – Was gehört wohin und wie finde ich
 es wieder?"** (45 minutes, three demos). Each demo lists what to show, where it lives and how to reset.
 
