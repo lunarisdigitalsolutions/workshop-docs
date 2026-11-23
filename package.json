@@ -4,7 +4,7 @@
   "private": true,
   "description": "Documentation as Code demo for the Pizza Luna ordering platform.",
   "scripts": {
-    "lint:docs": "npm run lint:md && npm run lint:spelling && npm run lint:structure",
+    "lint:docs": "node scripts/lint-docs.mjs",
     "lint:md": "markdownlint-cli2",
     "lint:spelling": "cspell --no-progress --show-suggestions \"docs/**/*.md\" \"*.md\" \".github/**/*.md\"",
     "lint:structure": "node scripts/check-docs.mjs",
