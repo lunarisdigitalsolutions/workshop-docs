@@ -1,5 +1,4 @@
 {
   "label": "Decisions",
-  "position": 4,
-  "link": { "type": "doc", "id": "architecture/decisions/index" }
+  "position": 4
 }
