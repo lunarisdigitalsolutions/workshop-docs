@@ -1,0 +1,21 @@
+/* Pizza Luna colours: tomato red, basil green, mozzarella white. */
+:root {
+  --ifm-color-primary: #c0392b;
+  --ifm-color-primary-dark: #ad3327;
+  --ifm-color-primary-darker: #a33025;
+  --ifm-color-primary-darkest: #86281e;
+  --ifm-color-primary-light: #d0453a;
+  --ifm-color-primary-lighter: #d34f44;
+  --ifm-color-primary-lightest: #db6c63;
+  --ifm-code-font-size: 95%;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #e57368;
+  --ifm-color-primary-dark: #e15a4d;
+  --ifm-color-primary-darker: #df4d40;
+  --ifm-color-primary-darkest: #c73527;
+  --ifm-color-primary-light: #e98c83;
+  --ifm-color-primary-lighter: #eb9990;
+  --ifm-color-primary-lightest: #f1bab4;
+}
