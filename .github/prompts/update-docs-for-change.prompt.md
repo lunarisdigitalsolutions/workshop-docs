@@ -3,7 +3,8 @@ mode: agent
 description: Update the documentation for the current change
 ---
 
-Look at the current uncommitted changes (`git diff`). For each change:
+Look at the current uncommitted changes (`git diff HEAD`). If there are none, look at the commits on
+the current branch that are not on `main` (`git diff main...HEAD`). For each change:
 
 1. Identify which audiences are affected using the change chain in
    `.github/copilot-instructions.md`.
